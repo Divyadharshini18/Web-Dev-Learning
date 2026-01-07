@@ -1,11 +1,16 @@
-import { createRoot } from 'react-dom/client'
-
-function Page() {
-  return (
-    <div>
+function Header(){
+  return(
+    <>
       <header>
         <img src="../react-logo.png" alt="React logo" width="40" />
       </header>
+    </>
+  )
+}
+
+function Main(){
+  return(
+    <>
       <main>
         <h1>React facts!</h1>
         <ol>
@@ -16,10 +21,27 @@ function Page() {
           <li>Powers thousands of enterprise apps, including mobile apps</li>
         </ol>
       </main>
+    </>
+  )
+}
+
+function Footer(){
+  return(
+    <>
       <footer>
         <span>© 20xx React development. All rights reserved.</span>
       </footer>
-    </div>
+    </>
+  )
+}
+
+function Page() { // Parent Component
+  return (
+    <div>
+      <Header /> 
+      <Main />
+      <Footer />
+    </div> // Child Component which are called inside Parent Component
   )
 }
 
